@@ -1,0 +1,48 @@
+[
+    {
+        "question": "Perché un volantino generato dalla maschera personalizzata può essere diverso da un volantino generato dalla maschera 'Stampa Rapida Volantini' pur selezionando lo stesso sport?",
+        "answer": "Due volantini possono essere diversi in quanto la generazione dalla maschera 'Stampa Rapida Volantini' applica un filtro sulla data di programmazione dell'evento: un evento viene escluso dalla stampa se la sua data di programmazione é precedente al momento in cui si genera il volantino. Per questo motivo le due stampe contengono insiemi distinti di eventi, ciò comporta la stampa di due volantini differenti nonstante facciano riferimento allo stesso sport."
+    },
+    {
+        "question": "Come posso modificare la dimensione delle pagine di un volantino?",
+        "answer": "È possibile modificare la dimensione delle pagine editando un campo testuale.Questo campo testuale appartiene alla maschera per la stampa personalizzata.Per impostarlo è necessario fare click su 'Stampa Volantino' sul menù principale oppure dalla maschera 'Stampa Rapida Volantini', poi individuare il pannello in basso 'Parametri del modello', dove è contenuto un campo editabile con l'etichetta 'N. righe per pagina:'; impostare il numero di righe desiderato."
+    },
+    {
+        "question": "Posso stampare eventi appartenenti a sport diversi usando la maschera per la stampa personalizzata?",
+        "answer": "In generale no, in quanto la maschera per la stampa personalizzata permette di selezionare un solo modello, il quale contiene informazioni relative ad un solo sport.Esistono delle eccezioni:",
+        "list": [{"item": "il modello contiene dei simboli presenti in più di uno sport"},
+                 {"item": "esistono eventi appartenenti alle manifestazioni selezionate, che hanno in comune dei simboli richiesti dal modello"}],
+        "answer2": "In questo caso, usando il modello in questione contenente i simboli comuni, è possibile stampare nel volantino gli eventi appartenenti a sport diversi.Per un uso completo della stampa multisport usare i pulsanti 'Altri Sport'."
+    },
+    {
+        "question": "Non riesco a stampare il volantino e viene mostrata la scritta 'Il modello non è presente nel tuo sistema'. Cosa significa e come posso risolvere?",
+        "answer": "Questa scritta significa che il processo di stampa del volantino richiede la presenza di alcuni modelli che non vengono riconosciuti all'interno del tuo sistema. Questa scritta appare quando non hai il diritto di usare il modello richiesto, oppure contattare l'amministratore per risolvere il problema."
+    },
+    {
+        "question": "Non riesco a stampare il volantino e viene mostrata la scritta 'Non ho eventi su cui lavorare'. Cosa significa e come posso risolvere?",
+        "answer": "Questa scritta significa che il processo di stampa del volantino ha filtrato tutti gli eventi presenti nel palinsesto in uso per rispettare i parametri desiderati. Ecco due possibili soluzioni:",
+        "list": [{"item": "Se si vuole continuare ad usare il palinsesto caricato allora usare la maschera di stampa personalizzata e impostare i filtri sulle date."},
+                 {"item": "Chiudere e riavviare il programma oppure cliccare sul pulsantone 'Aggiorna quote' presente nella maschera 'Stampa Rapida Volantini' per scaricare un nuovo palinsesto con gli eventi aggiornati"}]
+    },
+    {
+        "question": "Se tengo aperto il programma per molto tempo, scarica le quote aggiornate in modo automatico?",
+        "answer": "No, le quote non vengono scaricate in modo automatico dopo l'avvio del programma. Per scaricare le quote aggiornate fare click sul pulsantone 'Aggiorna quote' presente nella maschera 'Stampa Rapida Volantini'."
+    },
+    {
+        "question": "Posso utilizzare il programma se non sono connesso ad internet?",
+        "answer": "Si, è possibile utilizzare il programma con delle limitazioni:",
+        "list": [{"item": "viene caricato il palinsesto relativo all'ultimo accesso eseguito con la connessione ad internet funzionante. Nella maschera personalizza le informazioni relative all'intervallo di download dei palinsesti avrà una informazione non significativa, scrivendo 'sconosciuto'"},
+                 {"item": "non è possibile usare la codifica dei nomi brevi per le manifestazioni"},
+                 {"item": "i modelli per la stampa non saranno aggiornati e verranno utilizzati tutti i modelli scaricati fino all'utilizzo eseguito con la connessione ad internet funzionante"}]
+    },
+    {
+        "question": "Come faccio a capire se il modello selezionato raggruppa gli eventi per data o per campionato?",
+        "answer": "A questa domanda ci sono due risposte dipendenti dalla maschera da cui viene richiesta la stampa:",
+        "list": [{"item": "se si utilizza la maschera 'Stampa Rapida Volantini' questa informazione è rappresentata dal testo presente sui pulsanti; cliccando su 'Calcio' si ottiene una seconda maschera con i due criteri di raggruppamento, cliccando su uno di questi, i successivi sport useranno il criterio selezionato"},
+                 {"item": "se si utilizza la maschera per la stampa personalizzata, individuare il pannello 'Parametri del modello', qui controllare 'Raggruppamento': se è uguale a 'ByDate' il raggruppamento è per data, altrimenti se è uguale a 'ByDemonstration' è il raggruppamento è per campionato"}]
+    },
+    {
+        "question": " Posso modificare l'ordine e/o i simboli presenti in un modello?",
+        "answer": "No, questa operazione non è possibile eseguirla. Esiste una soluzione: contattare il fornitore dell'applicazione e chiedere la creazione di un modello personalizzato (indicando i parametri per la formattazione della pagina, i simboli desiderati e il criterio di raggruppamento) che sarà scaricato al successivo riavvio del programma. In questo modo sarà possibile avere un modello dedicato, sia per la sua composizione, sia per la visibilità (altri clienti non potranno utilizzarlo)."
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "class": "col-md-12",
+        "title": "",
+        "text": [{"paragraph": "Un prodotto che è pensato per rendere semplice la stampa dei volantini scommesse in modo da effettuarla solo quando serve e a più riprese durante la giornata di apertura della tua ricevitoria."},
+                 {"paragraph": "Anche le piccole ricevitorie che attualmente non hanno interesse a stampare i volantini potranno aumentare la qualità del servizio verso i propri clienti senza sprecare carta o tempo."},
+                 {"paragraph": "Ecco le caratteristiche più importanti di questo strumento, che vi aiuterà a svolgere l’attività di tutti i giorni nella vostra ricevitoria:"}],
+        "imageUrl": "",
+        "imageClass": "",
+        "isLeft": true
+    },
+    {
+        "class": "col-md-4",
+        "title": "Semplicità d’uso",
+        "text": [{"paragraph": "L’applicazione scaricherà autonomamente gli aggiornamenti da internet, avrete sempre la versione migliore installata sul vostro PC"}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/pulsantoni.jpg",
+        "imageClass": "col-md-8",
+        "isLeft": false,
+        "isRight": true
+    },
+    {
+        "class": "col-md-8",
+        "title": "Aggiornamenti",
+        "text": [{"paragraph": "Tutti possono imparare a stampare i palinsesti, non è richiesta alcuna conoscenza del PC e di applicazioni come Excel data la struttura a “wizard” e un interfaccia utente in modalità “touch-screen”"}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/updatePrograms.jpg",
+        "imageClass": "col-md-4",
+        "isLeft": true,
+        "isRight": false
+    },
+    {
+        "class": "col-md-4",
+        "title": "Impaginazione ottimizzata",
+        "text": [{"paragraph": "I modelli di stampa sono pensati per presentare in modo chiaro e sintetico le informazioni più importanti: sarà possibile risparmiare una grande quantità di carta e allo stesso tempo facilitare la comprensione delle informazioni"}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/sheetSoccerDetails.jpg",
+        "imageClass": "col-md-8",
+        "isLeft": false,
+        "isRight": true
+    },
+    {
+        "class": "col-md-6",
+        "title": "Marketing",
+        "text": [{"paragraph": "E' in fase di implementazione un’estensione dell’applicazione per riservare spazio nel piè di pagina del palinsesto stampato e poter inserire banner pubblicitari come immagini o testo formattato. Potrai facilmente recuperare l’investimento proponendo l’acquisto dello spazio nel volantino."}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/SpotDetail-2.jpg",
+        "imageClass": "col-md-6",
+        "isLeft": true,
+        "isRight": false
+    },
+    {
+        "class": "col-md-6",
+        "title": "Comunicazione della vostra ricevitoria",
+        "text": [{"paragraph": "Su ogni palinsesto stampato sarà presente il logo della tua ricevitoria o alcune informazioni (es. Tipo Agenzia, Nome, Indirizzo)"}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/datiRicevitoriaDetails.jpg",
+        "imageClass": "col-md-6",
+        "isLeft": false,
+        "isRight": true
+    },
+    {
+        "class": "col-md-8",
+        "title": "Personalizzazione della stampa",
+        "text": [{"paragraph": "è possibile personalizzare la stampa del palinsesto impostando pochi parametri al fine di visualizzare solo le informazioni desiderate: es. da a ; solo basket e tennis; solo campionato di serie A; usa il modello”calcio orizzontale”"}],
+        "imageUrl": "http://www.stampapalinsesti.it/img/customWindowDetails.jpg",
+        "imageClass": "col-md-4",
+        "isLeft": true,
+        "isRight": false
+    }
+]

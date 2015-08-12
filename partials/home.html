@@ -1,0 +1,61 @@
+
+<div class="row">
+	<div class="header-banner">
+
+		<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			});
+		});
+		</script>
+		<div class="" ng-controller="homeCtrl">
+			<div class="slider">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.imageUrl}}" style="margin:auto; padding: auto; width:100%">
+						<div class="caption2">
+							<h1 style="margin:auto; padding: auto;">{{slide.title}}</h1>
+							<p style="color: #444 !important;">{{slide.descpription}}</p>
+							<a href="#/" class="btn btn-carousel">More Info</a>
+						</div>
+					</slide>
+				</carousel>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.header-banner -->
+
+	<div id="section_header">
+		<h2>Panoramica</h2>
+	</div>
+	<div class="container" ng-controller="panCtrl">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row blank-row" ng-repeat="p in panoramica">
+					<div ng-show="{{p.isRight}}">
+						<div class="{{p.class}}">
+							<h3><b>{{p.title}}</b></h3>
+							<p ng-repeat="t in p.text">{{t.paragraph}}</p>
+						</div>
+						<div class="{{p.imageClass}}">
+							<img ng-src="{{p.imageUrl}}" width="100%">
+						</div>
+					</div>
+					<div ng-show="{{p.isLeft}}">
+						<div class="{{p.imageClass}}">
+							<img ng-src="{{p.imageUrl}}" width="100%">
+						</div>
+						<div class="{{p.class}}">
+							<h3><b>{{p.title}}</b></h3>
+							<p ng-repeat="t in p.text">{{t.paragraph}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

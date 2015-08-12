@@ -1,0 +1,32 @@
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>-->
+<div class="row" ng-controller="dfCtrl">
+	<div id="section_header">
+		<h2>Domande frequenti</h2>
+	</div>
+	<div class="container">
+		<div class="row">
+			<h3 class="funziona"><b>Domande frequenti</b></h3>
+			<div class="col-md-12 left-space">
+                <accordion>
+                    <accordion-group ng-repeat="q in questions" is-open="status.open">
+                        <accordion-heading>
+                            <div class="row">
+                                <div class="col-sm-11">
+                                    {{q.question}}
+                                </div>
+                                <div class="col-sm-1">
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                </div>
+                            </div>
+                        </accordion-heading>
+                        {{q.answer}}
+                        <ul style="padding-left:25px">
+                            <li ng-repeat="item in q.list">{{item['item']}}</li>
+                        </ul>
+                        {{q.answer2}}
+                    </accordion-group>
+                </accordion>
+			</div>
+		</div>
+	</div><!-- /.container -->
+</div><!-- /.row -->

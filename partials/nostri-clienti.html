@@ -1,0 +1,70 @@
+
+<div class="row">
+	<div class="container">
+		<div class="row">
+			<h3 class="funziona"><b>I nostri partneri</b></h3>
+			<p>Qui puoi aggiungere anche tu una foto della tua attività in caso anche tu usi il nostro software.</p>
+			<p>Nelli prossimi mesi, vincerai un disconto nel prezzo del nostro software.</p>
+		</div><br/><br/>
+		<div class="row">
+			<div>
+				<div id="map">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<form class="form-horizontal col-xs-10" name="loginform" novalidate ng-submit="loginform.$valid && addPoint()">
+				<div class="form-group">
+				    <label for="coords" class="col-xs-3 control-label">Coords</label>
+					<div class="col-xs-9">
+				    	<input type="text" class="form-control" name="coords" id="coords" ng-model="point" disabled="true" required="true"/>
+				    	<sm class="help"><i>Clicca sulla mappa qui sopra, per creare un marcatore per il tuo "Betting Agency"</i></sm>
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label for="agency" class="col-xs-3 control-label">Betting agency name</label>
+					<div class="col-xs-9">
+				    	<input type="text" class="form-control" name="agency" id="agency" ng-model="agency" placeholder="Il tuo negozio" required="true"/>
+				    	<sm class="help"><i>Scrivere il nome del tuo "Betting Agency"</i></sm>
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label for="gamePoint" class="col-xs-3 control-label">Name game point</label>
+					<div class="col-xs-9">
+				    	<input type="text" class="form-control" name="gamePoint" id="gamePoint" ng-model="gamePoint" placeholder="" required="true"/>
+				    	<sm class="help"><i>Scrivere il nome del tuo "name game point"</i></sm>
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label for="description" class="col-xs-3 control-label">Descrizione</label>
+					<div class="col-xs-9">
+				    	<textarea class="col-xs-12" name="desc" id="desc" ng-model="desc" placeholder="Scrivere qualche parola su il vostro negozio" required="true"></textarea>
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label for="inputaddress" class="col-xs-3 control-label">Address</label>
+				    <div class="col-xs-9">
+				      <input type="text" class="form-control" name="address" id="address" ng-model="address" placeholder="Address of your agency" required="true">
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label for="file" class="col-xs-3 control-label">Betting agency logo</label>
+				    <div class="col-xs-9">
+					    <div style="position:relative;">
+							<span class="btn btn-default btn-file">
+								Upload logo...
+								<input type="file" file-model="myFile" id="fileinput" name="file" required="true" accept="image/gif, image/jpg, image/jpeg, image/png" size="40" onchange='$("#upload-file-info").html($(this).val());'/>
+							</span>
+							<span class='label label-info' id="upload-file-info"></span>
+						</div>
+				    </div>
+				</div>
+			  	<div class="form-group">
+				    	<div class="col-xs-offset-3 col-xs-9">
+				      	<button type="submit" ng-disabled="loginform.$invalid" class="top-space btn btn-sm btn-success btn-file glyphicon glyphicon-ok "> Add Betting Agency </button>
+				    	</div>
+			  	</div>
+			</form>
+		</div><!-- /.row ng-controller
+	</div>
+</div>

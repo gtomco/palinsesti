@@ -1,0 +1,12 @@
+<div class="row" ng-controller="sportsCtrl">
+      <div class="col-md-12">
+            <div class="row" style="padding:0 40px">
+                  <center><h2>Seleziona uno sport:</h2></center>
+                  <div ng-repeat="sport in sports" class="col-md-4">
+                        <button class="btn-info btn-lg" style="width:100%" ng-click="stampa_rapida(sport.id)">
+                              {{sport["name"]}}
+                        </button>
+                  </div>
+            </div>
+      </div>
+</div>

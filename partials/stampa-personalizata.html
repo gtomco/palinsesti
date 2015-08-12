@@ -1,0 +1,51 @@
+<div class="row" ng-controller="sportsCtrl">
+      <div class="col-md-offset-4 col-md-4">
+            <div class="row" style="">
+                  <center><h2>Personalizza il tuo palinsesto:</h2></center>
+                  <br>
+                  <form class="form-horizontal" name="printForm">
+                        <div class="form-group">
+                              <label class="control-label col-md-12" for="sport_selection"><center>Seleziona il sport:</center></label>
+                        </div>
+                        <div class="form-group">
+                              <select name="sport_selection" ng-model="selected_sport" class="form-control col-md-6" ng-options="sport.id as sport.name for sport in sports" required></select>
+                        </div>
+                        <div class="form-group">
+                              <label class="control-label col-md-12" for="champ_selection"><center>Seleziona il campionato:</center></label>
+                        </div>
+                        <div class="form-group">
+                              <select name="champ_selection" ng-model="selected_champ" class="form-control" ng-options="championship.id as championship.name for championship in championships[selected_sport-1].list" required></select>
+                        </div>
+
+                        <!--<div ng-controller="DatepickerDemoCtrl">-->
+                              <div class="form-group col-md-12">
+                                    <center><h3>Select date range:</h3></center>
+                              </div>
+
+                              <div class="form-group">
+                                    <label class="col-md-12"><center>Start:</center></label>
+                                    <p class="input-group col-md-offset-2 col-md-8">
+                                          <input type="date" class="form-control" datepicker-popup ng-model="date_1" is-open="opened_1" min-date="minDate" ng-required="true" close-text="x" myformat/>
+                                          <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="open($event,1)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                    </p>
+                              </div>
+                              <div class="form-group">
+                                    <label class="col-md-12"><center>End:</center></label>
+                                    <p class="input-group col-md-offset-2 col-md-8">
+                                          <input type="date" class="form-control" datepicker-popup ng-model="date_2" is-open="opened_2" min-date="minDate" ng-required="true" close-text="x" myformat/>
+                                          <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="open($event,2)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                    </p>
+                              </div>
+                              <div class="row" style="height:300px;">
+                                    <br>
+                                    <div class="col-md-offset-4 col-md-4"><button style="width:100%" class="form-control btn-success" ng-click="stampa_personalizata()" ng-disabled="printForm.$invalid">Stampa</button></div>
+                              </div>
+
+                  </form>
+            </div>
+      </div>
+</div>

@@ -1,0 +1,142 @@
+<div class="row profile-page">
+      <div id="section_header">
+            <center>
+                  <h2>Benvenuto, {{me.visibleByTheUser.fullname.split(' ')[0]}}!</h2>
+            </center>
+      </div>
+      <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+            <tabset justified="true" class="nav nav-tabs nav-justified">
+                  <tab heading="I tuoi dati">
+                        <div class="row profile-section">
+                              <div class="clearfix visible-xs-block"></div>
+                              <form class="form-horizontal" name="profile-private">
+                                    <div class="form-group form-group-lg">
+                                          <label class="col-md-4 col-sm-4 col-xs-12 control-label" for="profile_username">Username:</label>
+                                          <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input class="form-control" ng-model="me.user.name" type="text" id="profile_username" placeholder="username" >
+                                          </div>
+                                    </div>
+                                    <div class="form-group form-group-lg">
+                                          <label class="col-md-4 col-sm-4 col-xs-12 control-label" for="profile_password">Tuo password:</label>
+                                          <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input class="form-control"  type="password" id="profile_password" placeholder="(click to change)">
+                                          </div>
+                                    </div>
+                              </form>
+                              <hr style="width: 100%; color: #DDD; height: 1px; background-color:#DDD;" />
+                              <form class="form-horizontal" name="profile-data">
+                                    <div class="form-group form-group-lg">
+                                          <label class="col-md-4 col-sm-4 col-xs-12 control-label" for="profile_name">Tuo nome:</label>
+                                          <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input class="form-control" ng-model="me.visibleByTheUser.fullname" type="text" id="profile_name" placeholder="John Smith">
+                                          </div>
+                                    </div>
+                                    <div class="form-group form-group-lg">
+                                          <label class="col-md-4 col-sm-4 col-xs-12 control-label" for="profile_email">Tuo E-Mail:</label>
+                                          <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input class="form-control" ng-model="me.visibleByTheUser.email" type="email" id="profile_email" placeholder="john.smith@company.com">
+                                          </div>
+                                    </div>
+                                    <div class="form-group form-group-lg">
+                                          <label class="col-md-4 col-sm-4 col-xs-12 control-label" for="profile_contact">Tuo numero di contatto:</label>
+                                          <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input class="form-control" ng-model="me.visibleByTheUser.contact" type="text" id="profile_contact" placeholder="0030 000 000 000">
+                                          </div>
+                                    </div>
+                              </form>
+
+                                    <button type="submit" class="btn btn-default btn-success" ng-click="updateProf()">
+                                          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                          Salva
+                                    </button>
+
+                        </div>
+                  </tab>
+                  <tab heading="Le tue agencie">
+                        <div class="row profile-section">
+                              <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="loading-spiner-holder" ng-show="(me.visibleByAnonymousUsers.agencies.length==0)" >
+                                          <div class="loading-spiner">
+                                                <div class="alert alert-danger" role="alert">
+                                                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                                      No agencies yet! Add one <a ui-sref="nostri-clienti">here</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                          <accordion>
+                                                <accordion-group ng-repeat="agency in me.visibleByAnonymousUsers.agencies">
+                                                      <accordion-heading>
+                                                            {{me.visibleByAnonymousUsers.agencies[$index].agency}}<i class="glyphicon glyphicon-chevron-down"></i>
+                                                      </accordion-heading>
+                                                      <form class="form-horizontal" name="profile-private">
+                                                            <div class="col-md-8">
+                                                                  <img width="100%" ng-src="{{url}}/file/{{agency.img}}?X-BB-SESSION={{token}}"/>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                  <div class="row">
+                                                                        <div class="col-md-12">
+                                                                              <input type="button" class="btn btn-sm btn-info" value="Upload">
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="row">
+                                                                        <div class="col-md-12">
+                                                                              <input type="button" class="btn btn-sm btn-warning" value="Delete">
+                                                                        </div>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="clearfix">
+
+                                                            </div>
+                                                            <div class="form-group form-group-lg">
+                                                                  <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="profile_name">Agency:</label>
+                                                                  <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <input class="form-control" ng-model="me.visibleByAnonymousUsers.agencies[$index].agency" type="text" id="" placeholder="">
+                                                                  </div>
+                                                            </div>
+                                                            <div class="form-group form-group-lg">
+                                                                  <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="profile_email">Game Point:</label>
+                                                                  <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <input class="form-control" ng-model="me.visibleByAnonymousUsers.agencies[$index].gamePoint" type="text" id="" placeholder="">
+                                                                  </div>
+                                                            </div>
+                                                            <div class="form-group form-group-lg">
+                                                                  <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="profile_contact">Address:</label>
+                                                                  <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <input class="form-control" ng-model="me.visibleByAnonymousUsers.agencies[$index].address" type="text" id="" placeholder="">
+                                                                  </div>
+                                                            </div>
+                                                            <div class="form-group form-group-lg">
+                                                                  <label class="col-md-offset-1 col-md-2 col-sm-2 col-xs-12 control-label" for="profile_contact">Lat:</label>
+                                                                  <span class="col-md-3 col-sm-3 col-xs-12">
+                                                                        {{me.visibleByAnonymousUsers.agencies[$index].lat}}
+                                                                  </span>
+                                                                  <label class="col-md-2 col-sm-2 col-xs-12 control-label" for="profile_contact">Long:</label>
+                                                                  <span class="col-md-3 col-sm-3 col-xs-12">
+                                                                        {{me.visibleByAnonymousUsers.agencies[$index].long}}
+                                                                  </span>
+                                                            </div>
+                                                            <div class="form-group form-group-lg">
+                                                                  <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="profile_contact">Descrizione:</label>
+                                                                  <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <textarea class="form-control" ng-model="me.visibleByAnonymousUsers.agencies[$index].desc" id="" placeholder=""></textarea>
+                                                                  </div>
+                                                            </div>
+                                                      </form>
+                                                      <div class="form-group form-group-lg">
+                                                            <div class="col-md-offset-1 col-md-5">
+                                                                  <input type="button" class="btn btn-md btn-success" value="Update" ng-click="updateProf()">
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                  <input type="button" class="btn btn-md btn-danger" value="Delete" ng-click="deleteAgency($index)">
+                                                            </div>
+                                                      </div>
+                                                </accordion-group>
+                                          </accordion>
+                                    </div>
+                              </div>
+                        </div>
+                  </tab>
+            </tabset>
+      </div>
+</div>

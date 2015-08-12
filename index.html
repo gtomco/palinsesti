@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--<link rel="shortcut icon" href="favicon.ico">-->
+	<!--<link rel="icon" href="favicon.ico" type="image/x-icon">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Commit Software Final</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Font Awesome  -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.13.2.min.js"></script>
+	<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js" type="text/javascript"></script>
+	<script src="js/app.js"></script>
+	<!--<script type="text/javascript" src="js/jspdf.js"></script>
+	<script type="text/javascript" src="js/html2canvas.js"></script>-->
+	<script src="js/ngBaasbox.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-messages.js"></script>
+	<script src="js/baasbox.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+
+
+</head>
+
+<body ng-app = "myApp">
+<nav ng-controller="userCtrl" class="navbar navbar-default navbar-fixed-top">
+  	<div class="row">
+    	<div class="navbar-header">
+      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		    	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+      		</button>
+      		<a class="navbar-brand" href="#/"><img class="logo" src="images/logo.png" alt="commit"></a>
+    	</div>
+    	<div class="navbar-collapse collapse">
+	      	<div class="navbar-right navbar-form">
+				<button type="button" ng-show="!isUserLogged" class="btn btn-success btn-sm" ng-click="openLogin()">
+					Login
+				</button>
+				<button type="button" ng-show="!isUserLogged" class="btn btn-warning btn-sm" ng-click="openRegister()">
+					Register
+				</button>
+				<button type="button" ng-show="isUserLogged"  class="btn btn-success btn-sm" ng-click="logout()">
+					Logout
+				</button>
+
+
+			</div><!-- /.navbar-form -->
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+			        <!--<li><a ui-sref="home">Home</a></li>-->
+			        <li><a ui-sref="funzionalita">Funzionalita</a></li>
+			        <li><a ui-sref="domande-frequenti">Domande Frequenti</a></li>
+			        <li><a ui-sref="nostri-clienti">I nostri clienti</a></li>
+			        <li><a ui-sref="versione-prova">Versione di prova</a></li>
+			        <li><a ng-show="isUserLogged" ui-sref="profile">Il tuo profilo</a></li>
+			        <!--<li><a ui-sref="stampa">Stampa</a></li>-->
+		      	</ul>
+	      	</div>
+    	</div><!-- /.navbar-collapse -->
+    </div><!-- /.row -->
+</nav>
+
+<div class="main-container" ui-view>
+
+</div>
+
+<!-- Footer -->
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10"> <span class="address">
+      					Comm.it S.r.l. - www.commitsoftware.it<br/>
+	                	Sede legale: via Mario de Bernardi, 65 - P.IVA 05766090483<br/>
+	                	Sede operativa: Via Antonio Gramsci, 426 - 50019 Sesto Fiorentino (FI) - Tel. +39 055 4492899</span> </div>
+      <div class="col-md-2">
+        <ul class="list-inline social-buttons">
+          <li><a href="#/"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="#/"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="#/"><i class="fa fa-google-plus"></i></a> </li>
+          <li><a href="#/"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

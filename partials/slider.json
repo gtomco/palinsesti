@@ -1,0 +1,20 @@
+[
+    {
+        "id": "bnr1",
+        "imageUrl": "images/bnr1.jpg",
+        "title": "Professional Solutions",
+        "descpription": "Lorem ipsum dolor sit amet, mea id noster everti. In eos prima necessitatibus, ad duo iudico facilis voluptatum."
+    },
+    {
+        "id": "bnr2",
+        "imageUrl": "images/bnr2.jpg",
+        "title": "Customized Solutions",
+        "descpription": "Lorem ipsum dolor sit amet, mea id noster everti. In eos prima necessitatibus, ad duo iudico facilis voluptatum."
+    },
+    {
+        "id": "bnr3",
+        "imageUrl": "images/bnr3.jpg",
+        "title": "Creative Solutions",
+        "descpription": "Lorem ipsum dolor sit amet, mea id noster everti. In eos prima necessitatibus, ad duo iudico facilis voluptatum."
+    }
+]

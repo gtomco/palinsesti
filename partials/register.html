@@ -1,0 +1,42 @@
+
+                  <div class="modal-header">
+                        <button ng-click="regcancelBtn()" type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Registrati, è gratis!</h4>
+                  </div>
+                  <div class="modal-body">
+                        <form class="form-horizontal" name="regForm" ng-submit="registerBtn(regUser, regPass, fullname, email)">
+                              <fieldset>
+                                    <div class="control-group">
+                                          <label class="control-label space-bottom-label" for="FullName">Full Name:</label>
+                                          <div class="controls space-bottom-field">
+                                                <input id="fullName" name="fullName" class="form-control" type="text" ng-model="fullname" placeholder="Name Surname" class="input-large" required="true">
+                                          </div>
+                                    </div>
+                                    <div class="control-group">
+                                          <label class="control-label space-bottom-label" for="Email">Email:</label>
+                                          <div class="controls space-bottom-field">
+                                                <input id="Email" name="Email" class="form-control" type="email" ng-model="email" placeholder="example@domain.com" class="input-large" required="">
+                                          </div>
+                                    </div>
+                                    <div class="control-group">
+                                          <label class="control-label space-bottom-label" for="userid">Alias:</label>
+                                          <div class="controls space-bottom-field">
+                                                <input id="userid" name="userid" ng-model="regUser" class="form-control" type="text" placeholder="username" class="input-large" required="">
+                                          </div>
+                                    </div>
+                                    <div class="control-group">
+                                          <label class="control-label space-bottom-label" for="password">Password:</label>
+                                          <div class="controls space-bottom-field">
+                                                <input id="password" name="password" ng-model="regPass" class="form-control" type="password" placeholder="*********" class="input-large" required="">
+                                                <p><em>1-8 Characters</em></p>
+                                          </div>
+                                    </div>
+                                    <div class="control-group">
+                                          <label class="control-label space-bottom-label" for="confirmsignup"></label>
+                                          <div class="controls space-bottom-field">
+                                                <button type="submit" id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                          </div>
+                                    </div>
+                              </fieldset>
+                        </form>
+                  </div>
