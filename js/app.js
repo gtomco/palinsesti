@@ -2,7 +2,7 @@ var app = angular.module('myApp',['ui.bootstrap','ui.router','ngBaasbox','ngMess
 
 
 app.service("connService", function($baasbox,tokenService){
-      var url = "http://localhost:9001";
+      var url = "http://213.183.128.135:9000";
       return {
             init: function(){
                   $baasbox.init({
@@ -22,24 +22,24 @@ app.service("connService", function($baasbox,tokenService){
 
 
 app.run(['$templateCache', function ($templateCache) {
-  $templateCache.put('error-messages',
-    '<span class="help-block" ng-message="email">Il campo deve essere un\'email valida</span>\n' +
-    '<span class="help-block" ng-message="max">Il valore è troppo grande</span>\n' +
-    '<span class="help-block" ng-message="min">Il valore è troppo piccolo</span>\n' +
-    '<span class="help-block" ng-message="maxlength">Il campo è troppo lungo</span>\n' +
-    '<span class="help-block" ng-message="minlength">Il password deve avere 8 caratteri</span>\n' +
-    '<span class="help-block" ng-message="number">Il valore deve essere un numero</span>\n' +
-    '<span class="help-block" ng-message="pattern">Il campo non rispetta le regole definite</span>\n' +
-    '<span class="help-block" ng-message="required">Il campo è obbligatorio</span>\n' +
-    '<span class="help-block" ng-message="url">Il campo deve essere un url valido</span>\n' +
-    '<span class="help-block" ng-message="date">Il campo deve essere una data valida</span>\n' +
-    '<span class="help-block" ng-message="datetimelocal">Il campo deve essere una data valida</span>\n' +
-    '<span class="help-block" ng-message="time">Il campo deve essere una data valida</span>\n' +
-    '<span class="help-block" ng-message="week">Il campo deve essere una settimana valida</span>\n' +
-    '<span class="help-block" ng-message="month">Il campo deve essere un mese valido</span>\n' +
-    '<span class="help-block" ng-message="parse">Il valore non è valido</span>\n' +
-    '<span class="help-block" ng-message="text">Il valore non è valido</span>\n' +
-    '');
+      $templateCache.put('error-messages',
+      '<span class="help-block" ng-message="email">Il campo deve essere un\'email valida</span>\n' +
+      '<span class="help-block" ng-message="max">Il valore è troppo grande</span>\n' +
+      '<span class="help-block" ng-message="min">Il valore è troppo piccolo</span>\n' +
+      '<span class="help-block" ng-message="maxlength">Il campo è troppo lungo</span>\n' +
+      '<span class="help-block" ng-message="minlength">Il password deve avere 8 caratteri</span>\n' +
+      '<span class="help-block" ng-message="number">Il valore deve essere un numero</span>\n' +
+      '<span class="help-block" ng-message="pattern">Il campo non rispetta le regole definite</span>\n' +
+      '<span class="help-block" ng-message="required">Il campo è obbligatorio</span>\n' +
+      '<span class="help-block" ng-message="url">Il campo deve essere un url valido</span>\n' +
+      '<span class="help-block" ng-message="date">Il campo deve essere una data valida</span>\n' +
+      '<span class="help-block" ng-message="datetimelocal">Il campo deve essere una data valida</span>\n' +
+      '<span class="help-block" ng-message="time">Il campo deve essere una data valida</span>\n' +
+      '<span class="help-block" ng-message="week">Il campo deve essere una settimana valida</span>\n' +
+      '<span class="help-block" ng-message="month">Il campo deve essere un mese valido</span>\n' +
+      '<span class="help-block" ng-message="parse">Il valore non è valido</span>\n' +
+      '<span class="help-block" ng-message="text">Il valore non è valido</span>\n' +
+      '');
 }]);
 
 
@@ -300,10 +300,6 @@ app.run(function ($rootScope,authService,loggedService, $state) {
 app.controller("loginCtrl", function($scope, $rootScope, authService){
       $scope.loginBtn = function (username, password, remember) {
             authService.login(username, password, remember);
-            $scope.user = "";
-            $scope.pass = "";
-            $scope.remember = false;
-            //$modalInstance.close('close');
       };
 
       $scope.cancelBtn = function () {
@@ -319,10 +315,6 @@ app.controller("loginCtrl", function($scope, $rootScope, authService){
 app.controller("registerCtrl", function($scope, $rootScope, authService){
       $scope.registerBtn = function (username, password, fullname, email) {
             authService.register(username, password, fullname, email)
-            $scope.regUser = "";
-            $scope.regPass = "";
-            $scope.fullname = "";
-            $scope.email = "";
       };
 
       $scope.regcancelBtn = function () {
@@ -340,9 +332,9 @@ app.controller("userCtrl", ['$scope', '$rootScope','connService', '$rootScope', 
                   size: "sm"
             });
             $rootScope.modal.result.then(function () {
-                  //authService.login("geiv","geiv",false);
+
             }, function () {
-                  //authService.login("geiv","geiv",false);
+
             });
       };
 
@@ -355,9 +347,9 @@ app.controller("userCtrl", ['$scope', '$rootScope','connService', '$rootScope', 
             });
 
             $rootScope.modal.result.then(function () {
-                  //authService.login("geiv","geiv",false);
+
             }, function () {
-                  //authService.login("geiv","geiv",false);
+
             });
       };
 

@@ -841,3 +841,12 @@ html, body {
 	font-size: 12px;
 	text-align: right;
 }
+.navbar-form{
+	margin:0px;
+}
+.navbar-right{
+	margin-right: 0px;
+}
+.modal-header h4{
+	color: #761C19;
+}
