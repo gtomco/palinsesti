@@ -30,11 +30,15 @@
                   </div>
             </div>
             <div class="form-group">
-                  <button type="submit" id="btn-login" ng-disabled="loginform.$invalid" class="btn btn-success">Login</button>
+                  <button type="submit" id="btn-login" ng-disabled="loginform.$invalid" class="btn btn-success">
+                        <span class="glyphicon glyphicon-off"></span> Login
+                  </button>
             </div>
       </form>
 </div>
 <div class="modal-footer">
       Sei nuovo qui?
-      <input id="login-register" value="Registrati" ng-click="logReg()" type="button" class="btn btn-danger btn-sm"/>
+      <button id="login-register" ng-click="logReg()" class="btn btn-danger btn-sm">
+            <span class="glyphicon glyphicon-pencil"></span> Registrati
+      </button>
 </div>

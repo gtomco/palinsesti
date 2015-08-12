@@ -768,13 +768,13 @@ html, body {
 
 .btn-lg {margin-bottom:20px;padding-top:20px;padding-bottom:20px;}
 
-.space-bottom-label{
+/*.space-bottom-label{
       margin-bottom:10px!important;
-}
+}*/
 
-.space-bottom-field{
+/*.space-bottom-field{
       margin-bottom:20px!important;
-}
+}*/
 .btn-carousel{
     background-color: rgba(221, 74, 73, 0.5)!important;
 }
@@ -835,5 +835,9 @@ html, body {
 	text-align: right;
 }
 .modal-body form .help-block{
-	font-size: 12px
+	font-size: 12px;
+}
+.modal-body form label em{
+	font-size: 12px;
+	text-align: right;
 }

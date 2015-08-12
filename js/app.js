@@ -27,7 +27,7 @@ app.run(['$templateCache', function ($templateCache) {
     '<span class="help-block" ng-message="max">Il valore è troppo grande</span>\n' +
     '<span class="help-block" ng-message="min">Il valore è troppo piccolo</span>\n' +
     '<span class="help-block" ng-message="maxlength">Il campo è troppo lungo</span>\n' +
-    '<span class="help-block" ng-message="minlength">Il campo è troppo corto</span>\n' +
+    '<span class="help-block" ng-message="minlength">Il password deve avere 8 caratteri</span>\n' +
     '<span class="help-block" ng-message="number">Il valore deve essere un numero</span>\n' +
     '<span class="help-block" ng-message="pattern">Il campo non rispetta le regole definite</span>\n' +
     '<span class="help-block" ng-message="required">Il campo è obbligatorio</span>\n' +
