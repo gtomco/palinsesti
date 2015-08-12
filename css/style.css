@@ -674,16 +674,16 @@ html, body {
     width: 100%;
     margin-top: 0px;
 }
-.input-group {
+/*.input-group {
     position: relative;
     display: table;
     border-collapse: separate;
     margin-bottom: 15px;
-}
+}*/
 .input-group-addon:first-child {
     border-right: 1px;
 }
-.input-group-addon {
+/*.input-group-addon {
     padding: 6px 12px;
     font-size: 14px;
     font-weight: normal;
@@ -693,7 +693,7 @@ html, body {
     background-color: none;
     border: 0px solid #ccc;
     border-radius: 4px;
-}
+}*/
 /** home.html **/
 .row {
 	margin-right: 0px;
@@ -702,7 +702,7 @@ html, body {
 .row .blank-row {
   	margin-bottom: 3%;
 }
-button, input, optgroup, select, textarea {
+/*button, input, optgroup, select, textarea {
   	margin-left: 3px;
   	margin-top: -8px;
   	margin-right: 0px;
@@ -710,6 +710,7 @@ button, input, optgroup, select, textarea {
   	font: inherit;
   	color: inherit;
 }
+*/
 .btn-sm, .btn-group-sm > .btn {
   	padding: 7px 10px;
   	font-size: 12px;
@@ -832,4 +833,7 @@ button, input, optgroup, select, textarea {
 }
 .glyphicon-chevron-down{
 	text-align: right;
+}
+.modal-body form .help-block{
+	font-size: 12px
 }
